@@ -10,8 +10,10 @@ import {
   Dimensions
 } from "react-native";
 
-import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
 
 let customFonts = {
   "Bubblegum-Sans": require("../assets/fonts/BubblegumSans-Regular.ttf")
@@ -35,12 +37,11 @@ export default class StoryCard extends Component {
   }
 
   render() {
-    if (!this.state.fontsLoaded) {
-      return <AppLoading />;
-    } else {
+    if (this.state.fontsLoaded) {
+      SplashScreen.hideAsync();
       return (
         <View style={styles.container}>
-          <Text style={{ color: "white" }}>Cartão de História!</Text>
+          <Text style={{ color: "white" }}>Story Card!</Text>
         </View>
       );
     }

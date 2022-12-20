@@ -7,7 +7,7 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions={{headerShown:false}}>
       <Drawer.Screen name="Tela Inicial" component={TabNavigator} />
       <Drawer.Screen name="Perfil" component={Profile} />
     </Drawer.Navigator>
