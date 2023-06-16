@@ -10,9 +10,12 @@ import {
   Dimensions
 } from "react-native";
 
-import * as Font from "expo-font";
+import * as Font from "expo-font"
+import { RFValue } from "react-native-responsive-fontsize";;
 import * as SplashScreen from 'expo-splash-screen';
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Ionicons from "react-native-vector-icons/Ionicons";
+
 
 SplashScreen.preventAutoHideAsync();
 
