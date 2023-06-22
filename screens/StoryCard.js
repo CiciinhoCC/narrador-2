@@ -44,7 +44,7 @@ export default class StoryCard extends Component {
     if (this.state.fontsLoaded) {
       SplashScreen.hideAsync();
       return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={this.props.navigation.navigate("Histórias",story = this.props.story)}>
           <View style={styles.cardContainer}>
             <Image
               source={require("../assets/story_image_1.png")}
@@ -69,7 +69,7 @@ export default class StoryCard extends Component {
               </View>
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
       );
     }
   }
