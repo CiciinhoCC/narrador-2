@@ -9,6 +9,7 @@ import {
   Image,
   Dimensions
 } from "react-native";
+import * as Speech from "expo-speech"
 
 import * as Font from "expo-font"
 import { RFValue } from "react-native-responsive-fontsize";;
@@ -40,6 +41,19 @@ export default class StoryScreen extends Component {
 
   componentDidMount() {
     this._loadFontsAsync();
+  }
+
+  ler = async(title, author, story, moral) => {
+    const {corAtual} = this.state.corSpeaker;
+    this.setState({corSpeaker: corAtual === "gray"? "#ee8249" : "gray"})
+    if(corAtual === "gray"){
+      Speech.speak(`${title} por ${author}`);
+      Speech.speak(story);
+      Speech.speak(`Moral da história: ${moral}`)
+    }
+    else{
+      Speech.stop();
+    }
   }
 
   render() {

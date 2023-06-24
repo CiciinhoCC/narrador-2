@@ -28,7 +28,9 @@
     "react-native-responsive-fontsize": "^0.5.1",
     "react-native-screens": "~3.18.0",
     "react-native-web": "~0.18.9",
-    "expo-speech": "~11.0.0"
+    "expo-speech": "~11.0.0",
+    "undefined": "//firebase@8.10.0",
+    "firebase": "8.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
